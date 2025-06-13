@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Committee for Chaotic Good</title>
+  <!-- Three.js + Vanta HALO for the trippy WebGL background (local) -->
+  <script src="three.r134.min.js"></script>
+  <script src="vanta.halo.min.js"></script>
+  <!-- Tailwind CSS via Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { margin: 0; height: 100%; width: 100%; overflow: hidden; background: #2a2c34; }
+    #vanta-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100vw; height: 300px; /* Adjust height as needed */
+      z-index: 0;
+      pointer-events: none;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      padding-top: 120px; /* Adjust to move content below the halo */
+    }
+  </style>
+</head>
+<body>
+  <!-- WebGL background -->
+  <div id="vanta-bg"></div>
+
+  <!-- Page Content -->
+  <main class="flex flex-col items-center text-center px-4 text-white gap-6 backdrop-blur-md">
+    <h1 class="text-4xl md:text-6xl font-bold drop-shadow-2xl">Committee for Chaotic Good</h1>
+    <p class="max-w-xl text-lg md:text-xl">We're quietly organizing a network of makers and fixers bent on prototyping a brighter, weirder future. Interested?</p>
+    <video class="w-80 md:w-96 rounded-2xl shadow-xl" src="loop.mp4" autoplay muted loop playsinline></video>
+    <a href="https://discord.gg/your-link" class="bg-white text-black font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">Join the Committee</a>
+  </main>
+
+  <script>
+    VANTA.HALO({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      baseColor: 0xffd01c,
+      backgroundColor: 0x2a2c34,
+      amplitudeFactor: 3.00,
+      size: 0.40
+    })
+  </script>
+</body>
+</html> 
